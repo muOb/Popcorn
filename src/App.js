@@ -103,9 +103,9 @@ function MovieDetale({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
   const coutRef = useRef(0);
-  // useEffect(() => {
-  //   if (userRating) coutRef.current++;
-  // }, [userRating]);
+  useEffect(() => {
+    if (userRating) coutRef.current++;
+  }, [userRating]);
 
   const {
     Title: title,
